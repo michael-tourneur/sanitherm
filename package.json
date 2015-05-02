@@ -1,0 +1,26 @@
+{
+  "name": "sanitherm",
+  "version": "1.0.0",
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-coffee": "*",
+    "gulp-jade": "*",
+    "gulp-stylus": "*",
+    "gulp-rename": "*",
+    "gulp-plumber": "*",
+    "gulp-webserver": "*",
+    "gulp-data": "*",
+    "kouto-swiss": "*",
+    "photoswipe": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/michael-tourneur/sanitherm.git"
+  },
+  "description": "Website for my dad",
+  "author": {
+    "name": "Michael Tourneur",
+    "url": ""
+  },
+  "license": "MIT"
+}
