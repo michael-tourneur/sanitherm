@@ -1,0 +1,62 @@
+light-blue = #009fe3
+dark-blue = #072436
+light-grey = #dcdcdc
+dark-grey = #999999
+light-yellow = #fffc01
+dark-yellow = #c9c702
+light-red = #ED6F82
+dark-red = #F11B3A
+white = #ffffff
+black = #000000
+
+*
+	color dark-blue
+
+a
+	color light-blue
+	
+	&:hover
+		color saturation(light-grey, 20%)
+
+input[type="text"], input[type="tel"], input[type="email"], input[type="password"], textarea
+	background-color white
+	border-color light-grey
+	color dark-blue
+
+header
+	background-color	white
+	border-bottom-color light-blue
+		
+	.company
+		color light-blue
+	
+	.name
+		color black
+	
+section
+	border-bottom-color dark-blue
+	
+	*
+		color white
+
+#presentation
+	background-color	dark-blue
+	
+#works
+	background-color	dark-yellow
+	
+#contact
+	background-color	white
+	
+	*
+		color black
+	
+#proposal
+	background-color	dark-grey
+	
+footer
+	background-color	dark-blue
+	
+	p 
+		color white
+	

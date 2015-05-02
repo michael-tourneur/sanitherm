@@ -1,0 +1,194 @@
+phone = 750px
+tablet = 980px
+cols = 12
+
+html, body
+	height	100%
+	
+img
+	width 100%
+	
+p
+	margin-top 0
+	text-align justify
+	
+h1
+	margin 0
+	
+label
+	display block
+	
+input[type="text"], input[type="tel"], input[type="email"], input[type="password"], textarea
+	display block
+	padding 5px 10px
+	width 100%
+	margin 5px 0
+	border-width 5px
+	border-style solid
+    
+.container
+	gs( "fluid", cols, ( 100% / cols ) * 0.80, ( 100% / cols ) * 0.2 )
+	max-width	1200px
+	padding 0 10px 20px 10px
+	
+.col11
+	col( 11 )
+	@media only screen and (max-width : phone)
+		col( )
+.col10
+	col( 10 )
+	@media only screen and (max-width : phone)
+		col( )
+.col9
+	col( 9 )
+	@media only screen and (max-width : phone)
+		col( )
+.col8
+	col( 8 )
+	@media only screen and (max-width : phone)
+		col( )
+.col8
+	col( 7 )
+	@media only screen and (max-width : phone)
+		col( )
+.col6
+	col( 6 )
+	@media only screen and (max-width : phone)
+		col( 12 )
+.col5
+	col( 5 )
+	@media only screen and (max-width : phone)
+		col( )
+.col4
+	col( 4 )
+	@media only screen and (max-width : phone)
+		col( )
+.col3
+	col( 3 )
+	@media only screen and (max-width : phone)
+		col( )
+.col2
+	col( 2 )
+	@media only screen and (max-width : phone)
+		col( )
+.col1
+	col( 1 )
+	@media only screen and (max-width : phone)
+		col( )
+	
+header
+	border-bottom-width	5px
+	border-bottom-style	solid
+	padding-top 10px
+	padding-bottom 10px
+	position	fixed
+	z-index 9999
+	top	0
+	width 100%
+	
+	> .container
+		padding-bottom 0
+	
+	#logo
+		display inline-block
+		
+		a
+			text-decoration none
+
+		span
+			display block
+			
+		.company			
+			@media only screen and (max-width : phone)
+				font-size 0.8em
+			
+		.name
+			top -10px
+			position relative
+			font-size 0.5em
+			
+			@media only screen and (max-width : phone)
+				top -5px
+				font-size 0.4em
+	
+section
+	min-height 95%
+	width 	100%
+	border-bottom-width	1px
+	border-bottom-style	solid
+	background-image url('../images/arrow.png')
+	background-size 75px auto
+	background-position center 98%
+	background-repeat no-repeat
+	
+	@media only screen and (max-width : phone)
+		background-position right 98%
+		
+	@media only screen and (max-width : tablet)
+		background-position right 98%
+	// display	table
+	
+	> .container
+		// vertical-align middle
+		height 100%
+		// display table-cell
+			
+	h2
+		text-align center
+		font-size 3em
+		
+		
+#presentation
+	margin-top 	80px
+	@media only screen and (max-width : phone)
+		margin-top 	65px
+		
+		img
+			margin-bottom 20px
+
+#works
+	@media only screen and (max-width : phone)
+		img
+			margin-bottom 20px
+					
+#contact
+	position 	relative
+	#map-canvas
+		position absolute
+		width: 100%;
+		height: 100%;
+
+#proposal
+	background-image none
+	
+	p 
+		text-align center
+		
+	label span
+		margin-left 5px
+		margin-right 10px
+		
+	textarea[name="comment"]
+		margin-top 70px
+		margin-bottom 50px
+		
+		@media only screen and (max-width : phone)
+			margin-top auto
+			margin-bottom 10px
+	
+footer
+	padding-bottom 20px
+	ul.container
+		padding 0
+		li
+			padding 40px 0
+			text-align center
+		
+		a
+			font-size 1.3em
+			text-decoration none
+			
+	p 
+		text-align center
+		font-size 0.8em
+		margin 0

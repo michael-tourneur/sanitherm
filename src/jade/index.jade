@@ -1,0 +1,26 @@
+doctype html
+html(lang="fr")
+	head
+		title=pageTitle
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		meta(name="description", content=pageDescription)
+		meta(name="robots", content="index, nofollow")
+		link(rel="stylesheet", type="text/css", href=baseURL+"/assets/css/app.min.css")
+
+	body
+		header
+			include ./includes/header.jade
+		section#presentation
+			include ./includes/presentation.jade
+		section#works
+			include ./includes/works.jade
+		section#contact
+			include ./includes/contact.jade
+		section#proposal
+			include ./includes/proposal.jade
+		footer
+			include ./includes/footer.jade
+
+		script(src=baseURL+"/assets/js/validate.min.js")
+		script(src=baseURL+"/assets/js/app.min.js")
