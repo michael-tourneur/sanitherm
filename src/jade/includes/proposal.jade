@@ -6,44 +6,44 @@
 		| <br>Nous vous répondrons dans les meilleurs délais. 
 		| <br>Merci pour votre confiance !
 	
-	div.col6
-		form(action='', method='post')
-	
-		h4 Vos coordonn&eacute;es :
-		label Civilit&eacute;* :
-			input.fondformulaire(name='civilite', type='radio', value='Mr') 
-			span Mr 
-			input.fondformulaire(type='radio', name='civilite', value='Mme') 
-			span Mme 
-			input.fondformulaire(type='radio', name='civilite', value='Melle') 
-			span Melle
-		label Nom * :
-		input.fondformulaire(type='text', name='nom', value='') 
-		
-		label Adresse * :
-		textarea.fondformulaire(name='adresse', cols='30', rows='3')
-		
+	form(action='', method='post')
 		div.col6
-			label Code postal * : 
-			input.fondformulaire(type='text', name='code', value='')
 		
-		div.col6
-			label Ville * :
-			input.fondformulaire(type='text', name='ville', value='')
-		
-		div.col6
-			label T&eacute;l&eacute;phone domicile* :
-			input.fondformulaire(type='text', name='tel', value='')
-		
-		div.col6
-			label T&eacute;l&eacute;phone portable :
-			input.fondformulaire(type='text', name='tel2', value='')
-		
-		label Adresse email* :
-		input.fondformulaire(type='text', name='email', value='')
+			h4 Vos coordonn&eacute;es :
+			label Civilit&eacute;* :
+				input.fondformulaire(name='civilite', type='radio', value='Mr') 
+				span Mr 
+				input.fondformulaire(type='radio', name='civilite', value='Mme') 
+				span Mme 
+				input.fondformulaire(type='radio', name='civilite', value='Melle') 
+				span Melle
+			label Nom * :
+			input.fondformulaire(type='text', name='nom', value='') 
+			
+			label Adresse * :
+			textarea.fondformulaire(name='adresse', cols='30', rows='3')
+			
+			div.col6
+				label Code postal * : 
+				input.fondformulaire(type='text', name='code', value='')
+			
+			div.col6
+				label Ville * :
+				input.fondformulaire(type='text', name='ville', value='')
+			
+			div.col6
+				label T&eacute;l&eacute;phone domicile* :
+				input.fondformulaire(type='text', name='tel', value='')
+			
+			div.col6
+				label T&eacute;l&eacute;phone portable :
+				input.fondformulaire(type='text', name='tel2', value='')
+			
+			label Adresse email* :
+			input.fondformulaire(type='text', name='email', value='')
 
-	div.col6
-		h4 Votre demande :
-		textarea.fondformulaire(name='comment', cols='40', rows='12')   
-		input.btn.btn-inverse(type='submit', name='submit', value='Envoyer')  
-		input.btn.btn-danger(type='reset', name='reset', value='Effacer')
+		div.col6
+			h4 Votre demande :
+			textarea.fondformulaire(name='comment', cols='40', rows='12')   
+			input.btn.btn-inverse(type='submit', name='submit', value='Envoyer')  
+			input.btn.btn-danger(type='reset', name='reset', value='Effacer')

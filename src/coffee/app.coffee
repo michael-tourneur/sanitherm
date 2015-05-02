@@ -1,11 +1,28 @@
 app = () ->
-
-	init = () ->
+	menuOpen = false
+	initMap = () ->
 		script = document.createElement('script');
 		script.type = 'text/javascript';
 		script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
-		      '&signed_in=true&callback=initMap';
+		      '&signed_in=true&callback=callbackMap';
 		document.body.appendChild(script);
+
+	initMenu = () ->
+		document.querySelector('#nav').addEventListener "click", () ->
+			d = document.querySelector "#navContainer"
+
+			console.log d.className, menuOpen
+			if menuOpen
+				d.className = d.className + " hidden"
+			else
+				d.className = d.className.replace /hidden/, ""
+
+			menuOpen = !menuOpen
+
+	initScroll = () ->
+
+		document.addEventListener "scroll", (e) ->
+			console.log(document.documentElement.scrollTop)
 
 	initLink = () ->
 		buttons = document.querySelectorAll('button[data-href]')
@@ -52,15 +69,25 @@ app = () ->
 			y: curtop
 		};
 
-	init()
 	initLink()
+	initScroll()
+	initMenu()
+	initMap()
 
-window.initMap = () ->
+window.callbackMap = () ->
 	mapOptions =
 		zoom: 8,
-		center: new google.maps.LatLng -34.397, 150.644
+		center: new google.maps.LatLng '-34.397', '150.644'
+		disableDefaultUI: true
 
 	map = new google.maps.Map document.getElementById 'map-canvas', mapOptions
+
+	map.setOptions 
+		draggable: true,
+		zoomControl: false,
+		scrollwheel: false,
+		disableDoubleClickZoom: true
+
 
 window.addEventListener "load", () ->
 	app()
