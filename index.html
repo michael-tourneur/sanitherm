@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Jacques Tourneur plombier-chauffagiste met à votre service plus de 20 ans d’expérience pour des travaux, entretiens ou dépannages urgents à Sanary et dans le Var.r">
     <meta name="robots" content="index, nofollow">
-    <link rel="stylesheet" type="text/css" href="http://localhost:8888/assets/css/app.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/app.min.css">
   </head>
   <body>
     <header>
       <div class="container">
         <h1 id="logo" class="left"><a href="/"><span class="company">SANITHERM</span><span class="name">Jacques Tourneur</span></a></h1>
+        <nav id="nav" class="right">
+          <div id="navContainer" class="hidden"><a href="#presentation">Présentation</a><a href="#works">Réalisation</a><a href="#contact">contact</a><a href="#proposal">Devis</a></div>
+        </nav>
       </div>
     </header>
     <section id="presentation">
@@ -55,43 +58,44 @@
           <br>Nous vous répondrons dans les meilleurs délais. 
           <br>Merci pour votre confiance !
         </p>
-        <div class="col6">
-          <form action="" method="post"></form>
-          <h4>Vos coordonn&eacute;es :</h4>
-          <label>Civilit&eacute;* :
-            <input name="civilite" type="radio" value="Mr" class="fondformulaire"><span>Mr </span>
-            <input type="radio" name="civilite" value="Mme" class="fondformulaire"><span>Mme </span>
-            <input type="radio" name="civilite" value="Melle" class="fondformulaire"><span>Melle</span>
-          </label>
-          <label>Nom * :</label>
-          <input type="text" name="nom" value="" class="fondformulaire">
-          <label>Adresse * :</label>
-          <textarea name="adresse" cols="30" rows="3" class="fondformulaire"></textarea>
+        <form action="" method="post">
           <div class="col6">
-            <label>Code postal * : </label>
-            <input type="text" name="code" value="" class="fondformulaire">
+            <h4>Vos coordonn&eacute;es :</h4>
+            <label>Civilit&eacute;* :
+              <input name="civilite" type="radio" value="Mr" class="fondformulaire"><span>Mr </span>
+              <input type="radio" name="civilite" value="Mme" class="fondformulaire"><span>Mme </span>
+              <input type="radio" name="civilite" value="Melle" class="fondformulaire"><span>Melle</span>
+            </label>
+            <label>Nom * :</label>
+            <input type="text" name="nom" value="" class="fondformulaire">
+            <label>Adresse * :</label>
+            <textarea name="adresse" cols="30" rows="3" class="fondformulaire"></textarea>
+            <div class="col6">
+              <label>Code postal * : </label>
+              <input type="text" name="code" value="" class="fondformulaire">
+            </div>
+            <div class="col6">
+              <label>Ville * :</label>
+              <input type="text" name="ville" value="" class="fondformulaire">
+            </div>
+            <div class="col6">
+              <label>T&eacute;l&eacute;phone domicile* :</label>
+              <input type="text" name="tel" value="" class="fondformulaire">
+            </div>
+            <div class="col6">
+              <label>T&eacute;l&eacute;phone portable :</label>
+              <input type="text" name="tel2" value="" class="fondformulaire">
+            </div>
+            <label>Adresse email* :</label>
+            <input type="text" name="email" value="" class="fondformulaire">
           </div>
           <div class="col6">
-            <label>Ville * :</label>
-            <input type="text" name="ville" value="" class="fondformulaire">
+            <h4>Votre demande :</h4>
+            <textarea name="comment" cols="40" rows="12" class="fondformulaire">  </textarea>
+            <input type="submit" name="submit" value="Envoyer" class="btn btn-inverse">
+            <input type="reset" name="reset" value="Effacer" class="btn btn-danger">
           </div>
-          <div class="col6">
-            <label>T&eacute;l&eacute;phone domicile* :</label>
-            <input type="text" name="tel" value="" class="fondformulaire">
-          </div>
-          <div class="col6">
-            <label>T&eacute;l&eacute;phone portable :</label>
-            <input type="text" name="tel2" value="" class="fondformulaire">
-          </div>
-          <label>Adresse email* :</label>
-          <input type="text" name="email" value="" class="fondformulaire">
-        </div>
-        <div class="col6">
-          <h4>Votre demande :</h4>
-          <textarea name="comment" cols="40" rows="12" class="fondformulaire">  </textarea>
-          <input type="submit" name="submit" value="Envoyer" class="btn btn-inverse">
-          <input type="reset" name="reset" value="Effacer" class="btn btn-danger">
-        </div>
+        </form>
       </div>
     </section>
     <footer>
@@ -105,7 +109,7 @@
       <p>SIRET 335 260 477 00021 APE453E</p>
       <p>FR 83 335 26 04 77</p>
     </footer>
-    <script src="http://localhost:8888/assets/js/validate.min.js"></script>
-    <script src="http://localhost:8888/assets/js/app.min.js"></script>
+    <script src="/assets/js/validate.min.js"></script>
+    <script src="/assets/js/app.min.js"></script>
   </body>
 </html>

@@ -243,12 +243,19 @@ textarea {
   border-width: 5px;
   border-style: solid;
 }
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
 .container {
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
   max-width: 1200px;
   padding: 0 10px 20px 10px;
+  position: relative;
 }
 .col11 {
   display: inline-block;
@@ -464,6 +471,53 @@ header #logo .name {
     font-size: 0.4em;
   }
 }
+header #nav {
+  margin-top: 15px;
+}
+@media only screen and (max-width: 750px) {
+  header #nav {
+    cursor: pointer;
+    background-image: url("../images/menu.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    right: 0;
+    margin-top: 10px;
+    overflow: visible;
+    min-width: 40px;
+    min-height: 29px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  header #nav #navContainer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 67px;
+    margin: 0;
+    padding: 0;
+  }
+  header #nav #navContainer.hidden {
+    display: none;
+  }
+}
+header #nav #navContainer a {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+@media only screen and (max-width: 750px) {
+  header #nav #navContainer a {
+    margin-left: 0;
+    text-align: center;
+    display: block;
+    padding: 10px 0;
+  }
+  header #nav #navContainer a:nth-child(4) {
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+  }
+}
 section {
   min-height: 95%;
   width: 100%;
@@ -514,6 +568,10 @@ section h2 {
   position: absolute;
   width: 100%;
   height: 100%;
+  z-index: 1;
+}
+#contact .container {
+  z-index: 2;
 }
 #proposal {
   background-image: none;
@@ -576,11 +634,24 @@ header {
   background-color: #fff;
   border-bottom-color: #009fe3;
 }
+@media only screen and (max-width: 750px) {
+  header .container {
+    overflow: visible;
+  }
+}
 header .company {
   color: #009fe3;
 }
 header .name {
   color: #000;
+}
+@media only screen and (max-width: 750px) {
+  header #nav a {
+    background-color: #fff;
+  }
+  header #nav a:nth-child(4) {
+    border-bottom-color: #009fe3;
+  }
 }
 section {
   border-bottom-color: #072436;
