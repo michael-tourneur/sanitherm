@@ -43,10 +43,10 @@
       <div id="map-canvas"></div>
       <div class="container">
         <h2>Contact</h2>
-        <div>
+        <div class="inner col6">
           <p>Pour tout conseil ou pour un dépannage urgent, un plombier à votre service !</p>
+          <button data-href="#proposal" class="btn">Votre devis en ligne</button>
         </div>
-        <button data-href="#proposal" class="btn">Votre devis en ligne</button>
       </div>
     </section>
     <section id="proposal">
@@ -58,7 +58,7 @@
           <br>Nous vous répondrons dans les meilleurs délais. 
           <br>Merci pour votre confiance !
         </p>
-        <form action="" method="post">
+        <form id="formDevis" action="" name="formDevis" method="post">
           <div class="col6">
             <h4>Vos coordonn&eacute;es :</h4>
             <label>Civilit&eacute;* :
@@ -91,7 +91,7 @@
           </div>
           <div class="col6">
             <h4>Votre demande :</h4>
-            <textarea name="comment" cols="40" rows="12" class="fondformulaire">  </textarea>
+            <textarea name="comment" cols="40" rows="12" value class="fondformulaire"></textarea>
             <input type="submit" name="submit" value="Envoyer" class="btn btn-inverse">
             <input type="reset" name="reset" value="Effacer" class="btn btn-danger">
           </div>
@@ -109,7 +109,6 @@
       <p>SIRET 335 260 477 00021 APE453E</p>
       <p>FR 83 335 26 04 77</p>
     </footer>
-    <script src="assets/js/validate.min.js"></script>
     <script src="assets/js/app.min.js"></script>
   </body>
 </html>
