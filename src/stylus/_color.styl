@@ -21,7 +21,11 @@ a
 input[type="text"], input[type="tel"], input[type="email"], input[type="password"], textarea
 	background-color white
 	border-color light-grey
-	color dark-blue
+	color dark-blue !important
+	
+input.error, textarea.error
+	border-color dark-red 
+
 
 header
 	background-color	white
@@ -60,8 +64,11 @@ section
 #contact
 	background-color	white
 	
-	*
-		color black
+	p, h2
+		color dark-blue
+		
+	.inner
+		background-color	white
 	
 #proposal
 	background-color	dark-grey

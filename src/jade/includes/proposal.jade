@@ -6,7 +6,7 @@
 		| <br>Nous vous répondrons dans les meilleurs délais. 
 		| <br>Merci pour votre confiance !
 	
-	form(action='', method='post')
+	form#formDevis(action='', name="formDevis" method='post')
 		div.col6
 		
 			h4 Vos coordonn&eacute;es :
@@ -44,6 +44,6 @@
 
 		div.col6
 			h4 Votre demande :
-			textarea.fondformulaire(name='comment', cols='40', rows='12')   
+			textarea.fondformulaire(name='comment', cols='40', rows='12' value=)
 			input.btn.btn-inverse(type='submit', name='submit', value='Envoyer')  
 			input.btn.btn-danger(type='reset', name='reset', value='Effacer')

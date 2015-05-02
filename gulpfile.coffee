@@ -1,11 +1,12 @@
 gulp = require 'gulp',
-coffee = require 'gulp-coffee',
 jade = require 'gulp-jade',
 stylus = require 'gulp-stylus',
 koutoSwiss = require 'kouto-swiss',
 rename    = require 'gulp-rename',
 plumber    = require 'gulp-plumber',
 webserver = require 'gulp-webserver',
+browserify = require 'gulp-browserify',
+uglify = require 'gulp-uglify',
 data = require 'gulp-data',
 fs = require 'fs'
 
@@ -24,12 +25,11 @@ destinations =
 	js: public_dir + '/assets/js'
 
 gulp.task 'stylus', ->
-	console.log('test');
 	gulp.src sources.stylus
 		.pipe plumber()
 		.pipe stylus
-        	use: 
-        		koutoSwiss()
+			use: 
+				koutoSwiss()
 		.pipe rename "app.min.css" 
 		.pipe gulp.dest destinations.css
 
@@ -44,11 +44,14 @@ gulp.task 'jade', ->
 	.pipe gulp.dest destinations.html
 
 gulp.task 'coffee', ->
-	gulp.src sources.coffee
-    .pipe plumber()
-    .pipe coffee()
-    .pipe rename "app.min.js" 
-    .pipe gulp.dest(destinations.js)
+	gulp.src sources.coffee, { read: false }
+	.pipe plumber()
+	.pipe browserify
+		transform: ['coffeeify'],
+		extensions: ['.coffee']
+	.pipe uglify()
+	.pipe rename "app.min.js" 
+	.pipe gulp.dest(destinations.js)
 
 gulp.task 'webserver', () ->
 	gulp.src public_dir

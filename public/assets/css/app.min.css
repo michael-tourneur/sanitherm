@@ -573,6 +573,9 @@ section h2 {
 #contact .container {
   z-index: 2;
 }
+#contact .container .inner {
+  padding: 20px;
+}
 #proposal {
   background-image: none;
 }
@@ -628,7 +631,11 @@ input[type="password"],
 textarea {
   background-color: #fff;
   border-color: #dcdcdc;
-  color: #072436;
+  color: #072436 !important;
+}
+input.error,
+textarea.error {
+  border-color: #f11b3a;
 }
 header {
   background-color: #fff;
@@ -668,8 +675,12 @@ section * {
 #contact {
   background-color: #fff;
 }
-#contact * {
-  color: #000;
+#contact p,
+#contact h2 {
+  color: #072436;
+}
+#contact .inner {
+  background-color: #fff;
 }
 #proposal {
   background-color: #999;

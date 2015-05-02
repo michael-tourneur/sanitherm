@@ -1,18 +1,6 @@
 {
   "name": "sanitherm",
   "version": "1.0.0",
-  "devDependencies": {
-    "gulp": "*",
-    "gulp-coffee": "*",
-    "gulp-jade": "*",
-    "gulp-stylus": "*",
-    "gulp-rename": "*",
-    "gulp-plumber": "*",
-    "gulp-webserver": "*",
-    "gulp-data": "*",
-    "kouto-swiss": "*",
-    "photoswipe": "*"
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/michael-tourneur/sanitherm.git"
@@ -22,5 +10,19 @@
     "name": "Michael Tourneur",
     "url": ""
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "*",
+    "gulp-jade": "*",
+    "gulp-stylus": "*",
+    "gulp-rename": "*",
+    "gulp-plumber": "*",
+    "gulp-webserver": "*",
+    "gulp-data": "*",
+    "kouto-swiss": "*",
+    "photoswipe": "*",
+    "qwest": "*",
+    "gulp-browserify": "*",
+    "gulp-uglify": "~1.2.0"
+  }
 }
