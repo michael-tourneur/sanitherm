@@ -3,9 +3,10 @@ html(lang="fr")
 	head
 		title=pageTitle
 		meta(charset="utf-8")
-		meta(name="viewport", content="width=device-width, initial-scale=1")
+		meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
 		meta(name="description", content=pageDescription)
 		meta(name="robots", content="index, nofollow")
+		link(rel="shortcut icon", type="image/x-icon", href=baseURL+"assets/images/favicon.ico")
 		link(rel="stylesheet", type="text/css", href=baseURL+"assets/css/app.min.css")
 
 	body
@@ -13,13 +14,14 @@ html(lang="fr")
 			include ./includes/header.jade
 		section#presentation
 			include ./includes/presentation.jade
-		section#works
-			include ./includes/works.jade
+		section#realisations
+			include ./includes/realisations.jade
 		section#contact
 			include ./includes/contact.jade
-		section#proposal
-			include ./includes/proposal.jade
+		section#devis
+			include ./includes/devis.jade
 		footer
 			include ./includes/footer.jade
 
+		include ./includes/modal.jade
 		script(src=baseURL+"assets/js/app.min.js")

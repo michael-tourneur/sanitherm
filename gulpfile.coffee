@@ -49,7 +49,7 @@ gulp.task 'coffee', ->
 	.pipe browserify
 		transform: ['coffeeify'],
 		extensions: ['.coffee']
-	.pipe uglify()
+	# .pipe uglify()
 	.pipe rename "app.min.js" 
 	.pipe gulp.dest(destinations.js)
 

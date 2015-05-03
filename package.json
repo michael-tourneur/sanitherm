@@ -23,6 +23,7 @@
     "photoswipe": "*",
     "qwest": "*",
     "gulp-browserify": "*",
-    "gulp-uglify": "~1.2.0"
+    "gulp-uglify": "~1.2.0",
+    "vanilla-modal": "~1.1.2"
   }
 }

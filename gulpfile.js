@@ -42,7 +42,7 @@
     }).pipe(plumber()).pipe(browserify({
       transform: ['coffeeify'],
       extensions: ['.coffee']
-    })).pipe(uglify()).pipe(rename("app.min.js")).pipe(gulp.dest(destinations.js));
+    })).pipe(rename("app.min.js")).pipe(gulp.dest(destinations.js));
   });
 
   gulp.task('webserver', function() {
