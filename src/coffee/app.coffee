@@ -1,9 +1,12 @@
 qwest = require 'qwest'
 validate = require 'validate-js'
 VanillaModal = require 'vanilla-modal'
+scrollTo = require '../libs/scrollTo.js'
 
 window.app = () ->
+	modal = new VanillaModal()
 	menuOpen = false
+
 	initMap = () ->
 		lat = 43.144643
 		long = 5.787034
@@ -31,7 +34,7 @@ window.app = () ->
 
 	initScroll = () ->
 		document.addEventListener "scroll", (e) ->
-			# console.log(document.documentElement.scrollTop)
+			console.log(document.documentElement.scrollTop)
 
 	initLink = () ->
 		buttons = document.querySelectorAll('button[data-href]')
@@ -43,7 +46,7 @@ window.app = () ->
 				
 				if(url.indexOf("#") > -1)
 					e.preventDefault()
-					scrollTo url			
+					scroll url			
 
 		addClickEventOnLinks = (element) ->
 			element.addEventListener "click", (e) ->
@@ -51,7 +54,7 @@ window.app = () ->
 
 				if(url.indexOf("#") > -1)
 					e.preventDefault()
-					scrollTo url
+					scroll url
 
 		if buttons
 			for element, index in buttons
@@ -61,12 +64,12 @@ window.app = () ->
 			for element, index in links
 				addClickEventOnLinks element
 
-		scrollTo = (el) ->
-			window.scroll 0, getPosition(document.querySelector(el)).y - 50
+		scroll = (el) ->
+			el = el.replace('#', '');
+			scrollTo.smoothScroll el, - 58
 
 	initGallery = () ->
 		galleryURL = '/gallery.php'
-		modal = new VanillaModal()
 		count = 0
 
 		document.querySelector '#modal'
@@ -105,11 +108,7 @@ window.app = () ->
 					initImage imagePath
 
 	initForm = () ->
-
-		apiKey = 'key-d0810d75bfab8b1da39c9eab3894eda7'
-		mailURL = 'https://'+apiKey+'@api.mailgun.net/v3/mg.sanitherm-plomberie.fr'
-		from = 'michael.tourneur@gmail.com'
-		subject = 'Un plombier vite!'
+		mailURL = '/email.php'
 
 		resetInput = (element) ->
 			element.className = element.className.replace /error/, ""
@@ -158,42 +157,26 @@ window.app = () ->
 			name: 'comment',
 			rules: 'required',
 		], (errors, event) ->
-			event.preventDefault()
+			# event.preventDefault()
 
 			if errors.length > 0
 				for error, index in errors
 					errorInput error.element
 			else
 
-				to = document.querySelector('input[name="email"]').value
+				formElements = document.getElementById("myForm").elements 
+				data = {}
+				for (i=0; i<formElements.length; i++)
+					if (formElements[i].type!="submit")
+						postData[formElements[i].name]=formElements[i].value
 
-				data = {
-					from: from
-					subject: subject
-					to: to
-					html: 'fsdfdsfd'
-				}
-				headers = {
-					'Access-Control-Allow-Origin': '*'
-				}
-				qwest.post mailURL, data, headers
+				qwest.post mailURL, data
 				.then (response) ->
-					console.log response
+					modal.open('#success')
 				.catch (e, url) ->
-					console.log e, url
-				
-	getPosition = (obj) ->
-		curleft = curtop = 0;
-		while (obj)
-			curleft += obj.offsetLeft
-			curtop += obj.offsetTop
-			obj = obj.offsetParent
-		return {
-			x: curleft,
-			y: curtop
-		}
+					modal.open('#error')
 
-	initScroll()
+	# initScroll()
 	initMenu()
 	initLink()
 	initGallery()

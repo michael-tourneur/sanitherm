@@ -47,3 +47,12 @@
 			textarea.fondformulaire(name='comment', cols='40', rows='12' value=)
 			input.btn.btn-inverse(type='submit', name='submit', value='Envoyer')  
 			input.btn.btn-danger(type='reset', name='reset', value='Effacer')
+
+		div#success(style="display:none")
+			div.modalInner.bgblue
+				| Merci pour votre confiance ! Nous vous répondrons dans les plus brefs délais.
+
+		div#error(style="display:none")
+			div.modalInner.bgred
+				| Merci pour votre confiance ! Nous vous répondrons dans les plus brefs délais.
+
