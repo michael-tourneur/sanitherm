@@ -673,6 +673,10 @@ footer p {
 .modal-visible #modal {
   display: table;
 }
+.modal-visible #modal .modalInner {
+  padding: 40px;
+  text-align: left;
+}
 * {
   color: #072436;
 }
@@ -753,6 +757,14 @@ footer {
   background-color: #072436;
 }
 footer p {
+  color: #fff;
+}
+.bgblue {
+  background-color: #072436;
+  color: #fff;
+}
+.bgred {
+  background-color: #f11b3a;
   color: #fff;
 }
 .btn {
