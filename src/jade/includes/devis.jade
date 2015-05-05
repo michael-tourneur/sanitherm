@@ -10,36 +10,41 @@
 		div.col6
 		
 			h4 Vos coordonn&eacute;es :
-			label Civilit&eacute;* :
+			label Civilit&eacute;<span class="red">*</span> :
 				input.fondformulaire(name='civilite', type='radio', value='Mr') 
 				span Mr 
 				input.fondformulaire(type='radio', name='civilite', value='Mme') 
 				span Mme 
 				input.fondformulaire(type='radio', name='civilite', value='Melle') 
 				span Melle
-			label Nom * :
-			input.fondformulaire(type='text', name='nom', value='') 
-			
-			label Adresse * :
+			div.col6
+				label Nom<span class="red">*</span> :
+				input.fondformulaire(type='text', name='nom', value='') 
+
+			div.col6
+				label Prénom<span class="red">*</span> :
+				input.fondformulaire(type='text', name='prenom', value='') 
+	
+			label Adresse<span class="red">*</span> :
 			textarea.fondformulaire(name='adresse', cols='30', rows='3')
 			
 			div.col6
-				label Code postal * : 
+				label Code postal<span class="red">*</span> : 
 				input.fondformulaire(type='text', name='code', value='')
 			
 			div.col6
-				label Ville * :
+				label Ville<span class="red">*</span> :
 				input.fondformulaire(type='text', name='ville', value='')
 			
 			div.col6
-				label T&eacute;l&eacute;phone domicile* :
+				label T&eacute;l&eacute;phone domicile<span class="red">*</span> :
 				input.fondformulaire(type='text', name='tel', value='')
 			
 			div.col6
 				label T&eacute;l&eacute;phone portable :
 				input.fondformulaire(type='text', name='tel2', value='')
 			
-			label Adresse email* :
+			label Adresse email<span class="red">*</span> :
 			input.fondformulaire(type='text', name='email', value='')
 
 		div.col6
@@ -47,6 +52,7 @@
 			textarea.fondformulaire(name='comment', cols='40', rows='12' value=)
 			input.btn.btn-inverse(type='submit', name='submit', value='Envoyer')  
 			input.btn.btn-danger(type='reset', name='reset', value='Effacer')
+			span.right.red * Champs obligatoires
 
 		div#success(style="display:none")
 			div.modalInner.bgblue
