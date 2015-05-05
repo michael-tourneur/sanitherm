@@ -21,7 +21,7 @@
     <section id="presentation">
       <div class="container">
         <h2>Un plombier, vite !</h2>
-        <div class="col6"><img src="http://placehold.it/750x500"></div>
+        <div class="col6"><img src="assets/images/sanitherm-plombier-sanary.jpg"></div>
         <div class="col6">
           <p>Jacques Tourneur met à votre service plus de 20 ans d’expérience en <strong>plomberie-chauffage</strong> pour des travaux, une installation, un entretien ou un dépannage urgent à <strong>Sanary et dans le Var</strong>.</p>
           <p>Vous recherchez un <strong>plombier</strong> expérimenté et disponible rapidement ? Vous avez trouvé !</p>
@@ -70,39 +70,45 @@
         <form id="formDevis" action="" name="formDevis" method="post">
           <div class="col6">
             <h4>Vos coordonn&eacute;es :</h4>
-            <label>Civilit&eacute;* :
+            <label>Civilit&eacute;<span class="red">*</span> :
               <input name="civilite" type="radio" value="Mr" class="fondformulaire"><span>Mr </span>
               <input type="radio" name="civilite" value="Mme" class="fondformulaire"><span>Mme </span>
               <input type="radio" name="civilite" value="Melle" class="fondformulaire"><span>Melle</span>
             </label>
-            <label>Nom * :</label>
-            <input type="text" name="nom" value="" class="fondformulaire">
-            <label>Adresse * :</label>
+            <div class="col6">
+              <label>Nom<span class="red">*</span> :</label>
+              <input type="text" name="nom" value="" class="fondformulaire">
+            </div>
+            <div class="col6">
+              <label>Prénom<span class="red">*</span> :</label>
+              <input type="text" name="prenom" value="" class="fondformulaire">
+            </div>
+            <label>Adresse<span class="red">*</span> :</label>
             <textarea name="adresse" cols="30" rows="3" class="fondformulaire"></textarea>
             <div class="col6">
-              <label>Code postal * : </label>
+              <label>Code postal<span class="red">*</span> : </label>
               <input type="text" name="code" value="" class="fondformulaire">
             </div>
             <div class="col6">
-              <label>Ville * :</label>
+              <label>Ville<span class="red">*</span> :</label>
               <input type="text" name="ville" value="" class="fondformulaire">
             </div>
             <div class="col6">
-              <label>T&eacute;l&eacute;phone domicile* :</label>
+              <label>T&eacute;l&eacute;phone domicile<span class="red">*</span> :</label>
               <input type="text" name="tel" value="" class="fondformulaire">
             </div>
             <div class="col6">
               <label>T&eacute;l&eacute;phone portable :</label>
               <input type="text" name="tel2" value="" class="fondformulaire">
             </div>
-            <label>Adresse email* :</label>
+            <label>Adresse email<span class="red">*</span> :</label>
             <input type="text" name="email" value="" class="fondformulaire">
           </div>
           <div class="col6">
             <h4>Votre demande :</h4>
             <textarea name="comment" cols="40" rows="12" value class="fondformulaire"></textarea>
             <input type="submit" name="submit" value="Envoyer" class="btn btn-inverse">
-            <input type="reset" name="reset" value="Effacer" class="btn btn-danger">
+            <input type="reset" name="reset" value="Effacer" class="btn btn-danger"><span class="right red">* Champs obligatoires</span>
           </div>
           <div id="success" style="display:none">
             <div class="modalInner bgblue">Merci pour votre confiance ! Nous vous répondrons dans les plus brefs délais.</div>
@@ -126,7 +132,7 @@
     </footer>
     <div id="modal" class="modal">
       <div class="modal-inner">
-        <div class="container"><a rel="modal:close">Close</a>
+        <div class="container"><a rel="modal:close">Fermer</a>
           <div class="modal-content"></div>
         </div>
       </div>

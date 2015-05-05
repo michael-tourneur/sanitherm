@@ -686,6 +686,9 @@ a {
 a:hover {
   color: #e3d5d5;
 }
+.red {
+  color: #f11b3a;
+}
 input[type="text"],
 input[type="tel"],
 input[type="email"],
@@ -701,7 +704,7 @@ textarea.error {
 }
 header {
   background-color: #fff;
-  border-bottom-color: #fffc01;
+  border-bottom-color: #c9c702;
 }
 @media only screen and (max-width: 750px) {
   header .container {
@@ -767,6 +770,7 @@ footer p {
   background-color: #f11b3a;
   color: #fff;
 }
+button,
 .btn {
   font-size: 14px;
   color: #072436;
@@ -777,35 +781,42 @@ footer p {
   cursor: pointer;
   margin: 0 auto;
 }
+button:hover,
 .btn:hover {
   color: #fff;
   background: #009fe3;
 }
+button:active,
 .btn:active {
-  cursor: pointer;
   position: relative;
   top: 2px;
 }
+button.btn-warning,
 .btn.btn-warning {
   color: #072436;
   background: #ff0;
 }
+button.btn-warning:hover,
 .btn.btn-warning:hover {
   color: #fff;
   background: #c9c702;
 }
+button.btn-danger,
 .btn.btn-danger {
   color: #fff;
   background: #ed6f82;
 }
+button.btn-danger:hover,
 .btn.btn-danger:hover {
   color: #fff;
   background: #f11b3a;
 }
+button.btn-inverse,
 .btn.btn-inverse {
   color: #fff;
   background: #009fe3;
 }
+button.btn-inverse:hover,
 .btn.btn-inverse:hover {
   color: #fff;
   background: #072436;
