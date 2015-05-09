@@ -123,7 +123,7 @@ window.app = () ->
 				for element, index in inputs
 					resetInput element
 
-		document.forms['formDevis'].addEventListener "submit", () ->
+		document.forms['formDevis'].addEventListener "submit", (e) ->
 			resetForm()
 
 		document.forms['formDevis'].addEventListener "reset", () ->
@@ -135,6 +135,10 @@ window.app = () ->
 			rules: 'required'
 		,
 			name: 'nom',
+			display: 'required',
+			rules: 'required'
+		,
+			name: 'prenom',
 			display: 'required',
 			rules: 'required'
 		,
@@ -157,25 +161,28 @@ window.app = () ->
 			name: 'comment',
 			rules: 'required',
 		], (errors, event) ->
-			# event.preventDefault()
-
+			event.preventDefault()
 			if errors.length > 0
 				for error, index in errors
 					errorInput error.element
 			else
-
-				formElements = document.getElementById("myForm").elements 
+				console.log 'test'
+				document.getElementById("submit").setAttribute('disabled', true)
+				formElements = document.getElementById("formDevis").elements 
 				data = {}
-				for (i=0; i<formElements.length; i++)
-					if (formElements[i].type!="submit")
-						postData[formElements[i].name]=formElements[i].value
-
+				i = 0;
+				while i < formElements.length
+					data[formElements[i].name]=formElements[i].value
+					i++
+				console.log data
 				qwest.post mailURL, data
 				.then (response) ->
 					modal.open('#success')
+					document.getElementById("formDevis").reset()
 				.catch (e, url) ->
 					modal.open('#error')
-
+				.complete () ->
+					document.getElementById("submit").removeAttribute('disabled')
 	# initScroll()
 	initMenu()
 	initLink()

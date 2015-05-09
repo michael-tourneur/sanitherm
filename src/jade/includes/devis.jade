@@ -50,8 +50,8 @@
 		div.col6
 			h4 Votre demande :
 			textarea.fondformulaire(name='comment', cols='40', rows='12' value=)
-			input.btn.btn-inverse(type='submit', name='submit', value='Envoyer')  
-			input.btn.btn-danger(type='reset', name='reset', value='Effacer')
+			input#submit.btn.btn-inverse(type='submit', value='Envoyer')  
+			input.btn.btn-danger(type='reset', value='Effacer')
 			span.right.red * Champs obligatoires
 
 		div#success(style="display:none")
@@ -60,5 +60,6 @@
 
 		div#error(style="display:none")
 			div.modalInner.bgred
-				| Merci pour votre confiance ! Nous vous répondrons dans les plus brefs délais.
+				| Votre demande de devis n'a pas pu etre envoyé. veuillez rééssayer ulterieurement 
+				| <br> ou <a href="#contact" rel="modal:close">contactez nous directement</a>.
 
