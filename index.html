@@ -107,14 +107,17 @@
           <div class="col6">
             <h4>Votre demande :</h4>
             <textarea name="comment" cols="40" rows="12" value class="fondformulaire"></textarea>
-            <input type="submit" name="submit" value="Envoyer" class="btn btn-inverse">
-            <input type="reset" name="reset" value="Effacer" class="btn btn-danger"><span class="right red">* Champs obligatoires</span>
+            <input id="submit" type="submit" value="Envoyer" class="btn btn-inverse">
+            <input type="reset" value="Effacer" class="btn btn-danger"><span class="right red">* Champs obligatoires</span>
           </div>
           <div id="success" style="display:none">
             <div class="modalInner bgblue">Merci pour votre confiance ! Nous vous répondrons dans les plus brefs délais.</div>
           </div>
           <div id="error" style="display:none">
-            <div class="modalInner bgred">Merci pour votre confiance ! Nous vous répondrons dans les plus brefs délais.</div>
+            <div class="modalInner bgred">
+              Votre demande de devis n'a pas pu etre envoyé. veuillez rééssayer ulterieurement 
+              <br> ou <a href="#contact" rel="modal:close">contactez nous directement</a>.
+            </div>
           </div>
         </form>
       </div>

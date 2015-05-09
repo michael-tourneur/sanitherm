@@ -658,7 +658,7 @@ footer p {
   max-width: 100%;
   max-height: 100%;
 }
-#modal .modal-inner .container a {
+#modal .modal-inner .container > a {
   position: absolute;
   right: 10px;
   top: 0;
@@ -704,7 +704,7 @@ textarea.error {
 }
 header {
   background-color: #fff;
-  border-bottom-color: #c9c702;
+  border-bottom-color: #fffc01;
 }
 @media only screen and (max-width: 750px) {
   header .container {
@@ -820,4 +820,18 @@ button.btn-inverse:hover,
 .btn.btn-inverse:hover {
   color: #fff;
   background: #072436;
+}
+button[disabled],
+.btn[disabled] {
+  color: #fff;
+  background: #dcdcdc;
+}
+button[disabled]:hover,
+.btn[disabled]:hover {
+  color: #fff;
+  background: #dcdcdc;
+}
+button[disabled]:active,
+.btn[disabled]:active {
+  top: 0;
 }
