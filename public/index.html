@@ -13,9 +13,13 @@
     <header>
       <div class="container">
         <h1 id="logo" class="left"><a href="/"><span class="company">SANITHERM</span><span class="name">Jacques Tourneur</span></a></h1>
-        <nav id="nav" class="right">
-          <div id="navContainer" class="hidden"><a href="#presentation">Présentation</a><a href="#realisations">Réalisations</a><a href="#contact">Contact</a><a href="#devis">Devis</a></div>
-        </nav>
+      </div>
+      <div class="navContainer">
+        <div class="container">
+          <nav id="nav" class="right">
+            <div id="navContainer" class="hidden"><a href="#presentation">Présentation</a><a href="#realisations">Réalisations</a><a href="#contact">Contact</a><a href="#devis">Devis gratuit</a></div>
+          </nav>
+        </div>
       </div>
     </header>
     <section id="presentation">
@@ -28,6 +32,9 @@
           <button data-href="#realisations" class="btn">En savoir plus</button>
         </div>
       </div>
+      <div class="container">
+        <h3 class="center">Plomberie - Chauffage <br> Vente -  Installation - Dépannage</h3>
+      </div>
     </section>
     <section id="realisations">
       <div class="container">
@@ -37,6 +44,7 @@
           <p>Vous avez des besoins spécifiques en <strong>géothermie</strong>, <strong>pompe à chaleur</strong>, <strong>plancher chauffant</strong> ou climatisation ? Jacques Tourneur vous conseille et intervient dans tout l’ouest Var (Sanary, Bandol, Six-Fours, Ollioules, La Seyne, Toulon) ainsi que dans toute la région PACA selon la nature de vos travaux. </p>
           <p>Demandez un devis en ligne gratuit !</p>
           <button data-href="#contact" class="btn">Nous contacter</button>
+          <button data-href="#devis" class="btn">Votre devis en ligne</button>
         </div>
       </div>
     </section>
@@ -73,7 +81,6 @@
             <label>Civilit&eacute;<span class="red">*</span> :
               <input name="civilite" type="radio" value="Mr" class="fondformulaire"><span>Mr </span>
               <input type="radio" name="civilite" value="Mme" class="fondformulaire"><span>Mme </span>
-              <input type="radio" name="civilite" value="Melle" class="fondformulaire"><span>Melle</span>
             </label>
             <div class="col6">
               <label>Nom<span class="red">*</span> :</label>
@@ -106,7 +113,7 @@
           </div>
           <div class="col6">
             <h4>Votre demande :</h4>
-            <textarea name="comment" cols="40" rows="12" value class="fondformulaire"></textarea>
+            <textarea name="message" cols="40" rows="12" value class="fondformulaire"></textarea>
             <input id="submit" type="submit" value="Envoyer" class="btn btn-inverse">
             <input type="reset" value="Effacer" class="btn btn-danger"><span class="right red">* Champs obligatoires</span>
           </div>
@@ -141,5 +148,14 @@
       </div>
     </div>
     <script src="assets/js/app.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-62794901-1', 'auto');
+      ga('send', 'pageview');
+    </script>
   </body>
 </html>

@@ -83,6 +83,10 @@ window.app = () ->
 			imgContainer.className = 'col4'
 			img = document.createElement("img")
 			img.setAttribute('src', imagePath)
+			path = imagePath.split("/")
+			filename = path[path.length - 1].replace('-', ' ').split(".")
+
+			img.setAttribute('alt', filename[0])
 			imgContainer.appendChild img
 			document.querySelector '#gallery'
 			.appendChild imgContainer
@@ -158,7 +162,7 @@ window.app = () ->
 			name: 'email',
 			rules: 'required',
 		,
-			name: 'comment',
+			name: 'message',
 			rules: 'required',
 		], (errors, event) ->
 			event.preventDefault()

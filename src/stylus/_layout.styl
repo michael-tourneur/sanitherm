@@ -19,6 +19,9 @@ h1
 label
 	display block
 	
+.center
+	text-align center
+	
 input[type="text"], input[type="tel"], input[type="email"], input[type="password"], textarea
 	display block
 	padding 5px 10px
@@ -88,14 +91,21 @@ header
 	border-bottom-width	5px
 	border-bottom-style	solid
 	padding-top 10px
-	padding-bottom 10px
+	// padding-bottom 10px
 	position	fixed
 	z-index 9999
-	top	0
+	top	-40px
 	width 100%
+	
+	@media only screen and (max-width : phone)
+		top	0px
 	
 	> .container
 		padding-bottom 0
+		top 40px
+		
+		@media only screen and (max-width : phone)
+			top	0px
 	
 	#logo
 		display inline-block
@@ -107,7 +117,7 @@ header
 			display block
 			
 		.company		
-			
+			font-size 1.2em
 			font-style italic
 
 			@media only screen and (max-width : phone)
@@ -121,9 +131,12 @@ header
 			@media only screen and (max-width : phone)
 				top -5px
 				font-size 0.4em
+				
+	.navContainer > .container
+		padding-bottom 0px
 	
 	#nav
-		margin-top 15px
+		margin-top 5px
 		
 		@media only screen and (max-width : phone)
 			cursor pointer
@@ -136,12 +149,13 @@ header
 			min-width 40px
 			min-height 29px
 			
+
 		#navContainer
 			@media only screen and (max-width : phone)
 				position absolute
 				left 0
 				right 0
-				top 67px
+				top 57px
 				margin 0
 				padding 0
 			
@@ -193,14 +207,20 @@ section
 		
 #presentation
 	margin-top 	80px
+	
+	h3
+		font-size 2.2em
+
 	@media only screen and (max-width : phone)
 		margin-top 	65px
+		
+		h3
+			font-size 1.6em
 		
 		img
 			margin-bottom 20px
 
 #realisations
-	
 	#gallery
 		.col4
 			max-height 100px

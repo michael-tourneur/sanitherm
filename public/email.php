@@ -12,7 +12,7 @@ else{
 	$bottom = file_get_contents(dirname(__FILE__).'/assets/email/bottom.html');
 	
 	$dadEmail = 'contact@sanitherm-plomberie.fr';
-	$dadEmail = $post['email'];
+	// $dadEmail = $post['email'];
 	//To Client
 	$to = $post['email'];
 	$subject = 'Demande de devis';

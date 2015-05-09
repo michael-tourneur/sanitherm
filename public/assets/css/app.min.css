@@ -210,6 +210,7 @@ body {
   font-family: 'roboto_condensedregular', sans-serif;
 }
 h2,
+h3,
 h4 {
   font-family: 'latolight', sans-serif;
   font-weight: lighter;
@@ -232,6 +233,9 @@ h1 {
 }
 label {
   display: block;
+}
+.center {
+  text-align: center;
 }
 input[type="text"],
 input[type="tel"],
@@ -439,14 +443,24 @@ header {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   padding-top: 10px;
-  padding-bottom: 10px;
   position: fixed;
   z-index: 9999;
-  top: 0;
+  top: -40px;
   width: 100%;
+}
+@media only screen and (max-width: 750px) {
+  header {
+    top: 0px;
+  }
 }
 header > .container {
   padding-bottom: 0;
+  top: 40px;
+}
+@media only screen and (max-width: 750px) {
+  header > .container {
+    top: 0px;
+  }
 }
 header #logo {
   display: inline-block;
@@ -458,6 +472,7 @@ header #logo span {
   display: block;
 }
 header #logo .company {
+  font-size: 1.2em;
   font-style: italic;
 }
 @media only screen and (max-width: 750px) {
@@ -476,8 +491,11 @@ header #logo .name {
     font-size: 0.4em;
   }
 }
+header .navContainer > .container {
+  padding-bottom: 0px;
+}
 header #nav {
-  margin-top: 15px;
+  margin-top: 5px;
 }
 @media only screen and (max-width: 750px) {
   header #nav {
@@ -497,7 +515,7 @@ header #nav {
     position: absolute;
     left: 0;
     right: 0;
-    top: 67px;
+    top: 57px;
     margin: 0;
     padding: 0;
   }
@@ -553,9 +571,15 @@ section h2 {
 #presentation {
   margin-top: 80px;
 }
+#presentation h3 {
+  font-size: 2.2em;
+}
 @media only screen and (max-width: 750px) {
   #presentation {
     margin-top: 65px;
+  }
+  #presentation h3 {
+    font-size: 1.6em;
   }
   #presentation img {
     margin-bottom: 20px;
@@ -717,6 +741,9 @@ header .company {
 header .name {
   color: #000;
 }
+header .navContainer {
+  background-color: #fffc01;
+}
 @media only screen and (max-width: 750px) {
   header #nav a {
     background-color: #fff;
@@ -735,7 +762,7 @@ section * {
   background-color: #072436;
 }
 #realisations {
-  background-color: #c9c702;
+  background-color: #4ca9ce;
 }
 #contact {
   background-color: #fff;
