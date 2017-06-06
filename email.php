@@ -36,7 +36,7 @@ else{
 	$to = $dadEmail;
 	$subject = 'Demande de devis de '.$post['civilite'].' '.$post['nom'];
 
-	$headers = "From: " . $post['email'] . "\r\n";
+	$headers = "From: " . $dadEmail . "\r\n";
 	$headers .= "Reply-To: ". $post['email'] . "\r\n";
 	$headers .= "MIME-Version: 1.0\r\n";
 	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
